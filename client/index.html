@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Learnace – Learn with ACE. Mock tests, MCQ practice and current affairs for JKSSB, JKPSC, SSC, UPSC and more." />
+    <meta name="theme-color" content="#0f5132" />
+    <meta property="og:title" content="Learnace – Learn with ACE" />
+    <meta property="og:description" content="Timed mock tests, topic-wise MCQ practice and daily current affairs." />
+    <meta property="og:image" content="/og.png" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>Learnace – Learn with ACE</title>
+    <script src="/theme.js"></script>
+    <style>
+      /* Branded splash: visible instantly, replaced by React as soon as the app mounts. */
+      .splash{position:fixed;inset:0;display:grid;place-content:center;justify-items:center;gap:18px;background:#fdfbf4;color:#0f5132;font:600 15px system-ui,sans-serif;z-index:100}
+      [data-theme=dark] .splash{background:#07140e;color:#9db3a7}
+      .splash img{width:min(240px,62vw);height:auto;animation:splash-in .7s ease both}
+      [data-theme=dark] .splash img{background:#fdfbf4;border-radius:22px;padding:14px}
+      .splash .sp-bar{width:140px;height:4px;border-radius:9px;background:rgba(15,81,50,.15);overflow:hidden}
+      .splash .sp-bar i{display:block;width:40%;height:100%;border-radius:9px;background:#d6a11c;animation:splash-bar 1.1s ease-in-out infinite}
+      @keyframes splash-in{from{opacity:0;transform:translateY(8px) scale(.97)}to{opacity:1;transform:none}}
+      @keyframes splash-bar{0%{transform:translateX(-110%)}100%{transform:translateX(350%)}}
+      @media(prefers-reduced-motion:reduce){.splash img,.splash .sp-bar i{animation:none}}
+    </style>
+  </head>
+  <body>
+    <div id="root"><div class="splash" role="status" aria-label="Loading Learnace"><img src="/logo.png" alt="Learnace – Learn with ACE" /><div class="sp-bar"><i></i></div></div></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "learnace",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Exam preparation platform: React + Express + Neon Postgres",
+  "scripts": {
+    "setup": "npm --prefix server install && npm --prefix client install",
+    "seed": "npm --prefix server run seed",
+    "dev": "concurrently -n api,web -c blue,green \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client install --include=dev && npm --prefix client run build && npm --prefix server install --omit=dev",
+    "start": "npm --prefix server start"
+  },
+  "devDependencies": { "concurrently": "^8.2.2" },
+  "engines": { "node": ">=18" }
+}
